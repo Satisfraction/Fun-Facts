@@ -1,19 +1,52 @@
-# Fun-Facts
+# FunFacts App
 
-Dies ist ein Python-Programm, das mithilfe einer API zufällige Fakten abruft und in einem Text-Widget anzeigt. Das Programm wurde mithilfe von Python und dem tkinter-Modul entwickelt.
+Dies ist eine Python-Anwendung, die zufällige Fakten aus einer API lädt und auf dem Bildschirm anzeigt. Die App wurde unter der MIT-Lizenz erstellt.
 
-Anforderungen:
-Das Programm erfordert Python 3.x und das tkinter-Modul. Das requests-Modul muss ebenfalls installiert sein, um HTTP-Anfragen an die API zu senden.
+## Verwendung
 
-Sie können requests mit dem folgenden Befehl über die Kommandozeile installieren:
+1. Laden Sie die Datei `fun_facts.py` herunter.
+2. Stellen Sie sicher, dass Sie die erforderlichen Bibliotheken installiert haben: `requests` und `kivy`.
+3. Führen Sie die Datei aus: `python FunFacts.py`.
+4. Klicken Sie auf die Schaltfläche "Zeige mir einen FunFact!", um einen zufälligen Fakt zu laden.
 
-pip install requests
+## Konfiguration
 
-Verwendung:
-Führen Sie die Python-Datei fun_facts.py aus, um das Programm zu starten. Nach dem Start des Programms wird ein Fenster angezeigt, das eine Schaltfläche enthält, um einen zufälligen Fakt anzuzeigen.
+Die App kann durch Ändern der folgenden Optionen in der Datei `FunFacts.py` konfiguriert werden:
 
-Klicken Sie auf die Schaltfläche, um einen neuen Fakt anzuzeigen. Der Fakt wird in einem Text-Widget unter der Schaltfläche angezeigt.
+- `Config.set('graphics', 'width', '800')`: Legt die Breite des Fensters fest.
+- `Config.set('graphics', 'height', '400')`: Legt die Höhe des Fensters fest.
+- `Config.set('graphics', 'resizable', 0)`: Deaktiviert die Größenänderung des Fensters.
 
-Wenn das Programm keinen Fakt abrufen kann, wird eine Fehlermeldung in dem Text-Widget angezeigt.
+## FunFacts-Klasse
 
-Sie können das Programm schließen, indem Sie das Fenster schließen oder das Programm über die Konsole beenden.
+Die `FunFacts`-Klasse ist eine Kivy-Boxlayout-Klasse, die das Layout und das Verhalten der App definiert.
+
+### Methoden
+
+- `__init__(self, **kwargs)`: Initialisiert das Layout und die Widgets der App.
+- `show_fact(self, button)`: Lädt einen zufälligen Fakt aus der API und zeigt ihn an.
+
+### Attribute
+
+- `orientation`: Legt die Ausrichtung des Layouts fest.
+- `padding`: Legt den Abstand zwischen dem Layout und den Widgets fest.
+- `spacing`: Legt den Abstand zwischen den Widgets fest.
+- `background_color`: Legt die Hintergrundfarbe des Layouts fest.
+- `fact_button`: Die Schaltfläche, um einen neuen Fakt zu laden.
+- `fact_text`: Das Label, das den aktuellen Fakt anzeigt.
+
+## FunFactsApp-Klasse
+
+Die `FunFactsApp`-Klasse ist eine Kivy-App-Klasse, die das Starten der App ermöglicht.
+
+### Methoden
+
+- `build(self)`: Erstellt das App-Layout.
+
+## Autor
+
+Diese App wurde von Satisfraction erstellt.
+
+## Lizenz
+
+Diese App steht unter der MIT-Lizenz.
